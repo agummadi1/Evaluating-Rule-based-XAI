@@ -1,8 +1,10 @@
-Evaluating Rule-based XAI Techniques
-Datasets
-(1) MEMS datasets:
+<h1>Evaluating Whitebox XAI Techniques</h1>
+
+<h2>Datasets</h2>
+
+<h3>(1)  MEMS datasets:</h3>
 To build these datasets, an experiment was conducted in the motor testbed to collect machine condition data (i.e., acceleration) for different health conditions. During the experiment, the acceleration signals were collected from both piezoelectric and MEMS sensors at the same time with the sampling rate of 3.2 kHz and 10 Hz, respectively, for X, Y, and Z axes. Different levels of machine health condition can be induced by mounting a mass on the balancing disk, thus different levels of mechanical imbalance are used to trigger failures. Failure condition can be classified as one of three possible states - normal, near-failure, and failure. Multiple levels of the mechanical imbalance can be generated in the motor testbed (i.e., more masses indicate worse health condition). In this experiment, three levels of mechanical imbalance (i.e., normal, near-failure, failure) were considered Acceleration data were collected at the ten rotational speeds (100, 200, 300, 320, 340, 360, 380, 400, 500, and 600 RPM) for each condition, while the motor is running, 50 samples were collected at 10 s interval, for each of the ten rotational speeds. We use this same data for defect-type classification and learning transfer tasks.
-(2) N-BaIoT dataset:
+<h3>(2) N-BaIoT dataset:</h3>
 It was created to detect IoT botnet attacks and is a useful resource for researching cybersecurity issues in the context of the Internet of Things (IoT). This data was gathered from nine commercial IoT devices that were actually infected by two well-known botnets, Mirai and Gafgyt.
 Every data instance in the dataset has access to a variety of features. These attributes are divided into multiple groups:
 
@@ -52,7 +54,7 @@ mirai.udpplain: This class represents plain UDP assaults that aim to overload Io
 
 The dataset consists of data collected from 9 IoT devices, however, for this paper, we have chosen to specially work on the dataset of DEVICE 7 - Samsung SNH 1011 N Webcam which has only classes 1 -6
 
-Metrics explained
+<h2>Metrics explained</h2>
 
 We have conducted experiments for the following metrics:
 Descriptive Accuracy: To generate Descriptive Accuracy Graphs, see the code desc_acc_gen_shap.py for the respective dataset.
@@ -69,7 +71,7 @@ Precision:
 
 Fidelity: 
 
-How to run the programs
+<h2>How to run the programs</h2>
 
 Inside each rule-based method's folder, you will find dataset+metric based folders.
 you will find folders of the 3 techniques used in this paper, which contain programs (and output files) for the respective datasets. Each one of these programs outputs:
