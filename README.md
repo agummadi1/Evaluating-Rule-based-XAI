@@ -1,4 +1,9 @@
-<h1>Evaluating Whitebox XAI Techniques</h1>
+<h1>Evaluating Rule-based XAI Techniques</h1>
+
+<h2>Rule-based XAI Techniques</h2>
+
+<h3>(1) ANCHOR</h3>
+<h3>(1) RuleFit</h3>
 
 <h2>Datasets</h2>
 
