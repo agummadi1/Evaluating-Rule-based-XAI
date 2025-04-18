@@ -3,7 +3,11 @@
 <h2>Rule-based XAI Techniques</h2>
 
 <h3>(1) ANCHOR</h3>
-<h3>(1) RuleFit</h3>
+Anchor Explainability is a rule-based method for interpreting machine learning models. Unlike traditional feature importance methods, Anchors provide if-then conditions that serve as high-precision explanations for model predictions. These conditions, called anchors, define specific feature values or ranges that, when met, result in a consistent prediction with high confidence.
+Anchors work by iteratively perturbing input features and observing how the model's predictions change. The goal is to find the minimal set of conditions that "anchor" a prediction, meaning the model remains highly confident in its decision within this feature subset. 
+
+<h3>(2) RuleFit</h3>
+RuleFit is a hybrid interpretable model that combines linear regression with decision rules extracted from tree ensembles (like decision trees or random forests).It generates simple, human-readable if-then rules alongside linear terms, making it easy to understand how features contribute to predictions.
 
 <h2>Datasets</h2>
 
@@ -62,6 +66,7 @@ The dataset consists of data collected from 9 IoT devices, however, for this pap
 <h2>Metrics explained</h2>
 
 We have conducted experiments for the following metrics:
+
 Descriptive Accuracy: To generate Descriptive Accuracy Graphs, see the code desc_acc_gen_shap.py for the respective dataset.
 
 Sparsity: To generate Sparsity Graphs, see the code sparsity_gen_shap.py for the respective dataset.
@@ -79,16 +84,28 @@ Fidelity:
 <h2>How to run the programs</h2>
 
 Inside each rule-based method's folder, you will find dataset+metric based folders.
-you will find folders of the 3 techniques used in this paper, which contain programs (and output files) for the respective datasets. Each one of these programs outputs:
 
-The accuracy for the each model/method.
-The values for y_axis for the sparsity (that will need to be copied and pasted into the respective sparsity_gen_shap.py).
-Top features in importance order (that will be needed to rerun these same programs to obtain new Accuracy values for Descriptive Accuracy. Take note of the values as you use less features and input these values in the respective desc_acc_gen_shap.py ).
-The number of samples being used.
-Descriptive Accuracy: To generate Descriptive Accuracy Graphs, see the code desc_acc_gen_shap.py for the respective dataset.
+<h3>The 4metrics folder</h3>
+It contains the codes of all 4 models used in the paper. Each one of these programs outputs:
 
-Sparsity: To generate Sparsity Graphs, see the code sparsity_gen_shap.py for the respective dataset.
+a. The accuracy for the each model/method
+b. The values for y_axis for the sparsity (To generate Sparsity Graphs, you will need to copy-paste these values into the respective gen_sparsity code).
+c. Top features in importance order based on rules 
+(To generate Descriptive Accuracy Graphs, rerun code using same number of samples but omitting top features each time and note the accuracy. Enter these accuracies in the respective gen_desc_acc code)
+(For Stability metrics, run the programs 3x or more and note the obtained top k features in each run and compare the similarity.)
+d. Time taken for execution (Efficiency)
+e. The number of samples being used (Change value and rerun as desired, to obtain varied efficiency results)
 
-Stability: For Stability metrics, run the programs 3x or more and note the obtained top k features in each run and compare.
+<h3>The Fidelity folder</h3>
+It contains the codes of all 4 models used in the paper. Each one of these programs outputs:
 
-Efficiency: From the output file, take note of the time taken.
+a. Fidelity score
+b. Precision
+c. Coverage
+
+<h3>The Multiclass folder/h3>
+It contains the codes of all 4 models used in the paper. Each one of these programs outputs a **class-wise** output file which consists of:
+
+a. Rules
+b. Precision
+c. Coverage
