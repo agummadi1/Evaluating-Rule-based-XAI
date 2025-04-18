@@ -7,7 +7,7 @@ Anchor Explainability is a rule-based method for interpreting machine learning m
 Anchors work by iteratively perturbing input features and observing how the model's predictions change. The goal is to find the minimal set of conditions that "anchor" a prediction, meaning the model remains highly confident in its decision within this feature subset. 
 
 <h3>(2) RuleFit</h3>
-RuleFit is a hybrid interpretable model that combines linear regression with decision rules extracted from tree ensembles (like decision trees or random forests).It generates simple, human-readable if-then rules alongside linear terms, making it easy to understand how features contribute to predictions.
+RuleFit is a hybrid interpretable model that combines linear regression with decision rules extracted from tree ensembles (like decision trees or random forests).It generates simple, human-readable if-then rules alongside linear terms, making it easy to understand how features contribute to predictions.
 
 <h2>Datasets</h2>
 
@@ -104,7 +104,7 @@ b. Precision
 c. Coverage
 
 <h3>The Multiclass folder/h3>
-It contains the codes of all 4 models used in the paper. Each one of these programs outputs a **class-wise** output file which consists of:
+It contains the codes of all 4 models used in the paper. Each one of these programs outputs a class-wise output file which consists of:
 
 a. Rules
 b. Precision
