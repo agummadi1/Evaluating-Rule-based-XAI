@@ -86,26 +86,37 @@ Fidelity:
 Inside each rule-based method's folder, you will find dataset+metric based folders.
 
 <h3>The 4metrics folder</h3>
+
 It contains the codes of all 4 models used in the paper. Each one of these programs outputs:
 
 a. The accuracy for the each model/method
+
 b. The values for y_axis for the sparsity (To generate Sparsity Graphs, you will need to copy-paste these values into the respective gen_sparsity code).
+
 c. Top features in importance order based on rules 
 (To generate Descriptive Accuracy Graphs, rerun code using same number of samples but omitting top features each time and note the accuracy. Enter these accuracies in the respective gen_desc_acc code)
 (For Stability metrics, run the programs 3x or more and note the obtained top k features in each run and compare the similarity.)
+
 d. Time taken for execution (Efficiency)
+
 e. The number of samples being used (Change value and rerun as desired, to obtain varied efficiency results)
 
 <h3>The Fidelity folder</h3>
+
 It contains the codes of all 4 models used in the paper. Each one of these programs outputs:
 
 a. Fidelity score
+
 b. Precision
+
 c. Coverage
 
-<h3>The Multiclass folder/h3>
+<h3>The Multiclass folder</h3>
+  
 It contains the codes of all 4 models used in the paper. Each one of these programs outputs a class-wise output file which consists of:
 
 a. Rules
+
 b. Precision
+
 c. Coverage
