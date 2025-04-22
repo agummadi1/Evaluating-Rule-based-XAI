@@ -63,23 +63,9 @@ mirai.udpplain: This class represents plain UDP assaults that aim to overload Io
 
 The dataset consists of data collected from 9 IoT devices, however, for this paper, we have chosen to specially work on the dataset of DEVICE 7 - Samsung SNH 1011 N Webcam which has only classes 1 -6
 
-<h2>Metrics explained</h2>
+<h2>Metrics</h2>
 
-We have conducted experiments for the following metrics:
-
-Descriptive Accuracy: To generate Descriptive Accuracy Graphs, see the code desc_acc_gen_shap.py for the respective dataset.
-
-Sparsity: To generate Sparsity Graphs, see the code sparsity_gen_shap.py for the respective dataset.
-
-Stability: For Stability metrics, run the programs 3x or more and note the obtained top k features in each run and compare.
-
-Efficiency: From the output file, take note of the time taken.
-
-Coverage:
-
-Precision: 
-
-Fidelity: 
+Descriptive Accuracy, Sparsity, Stability, Efficiency, Coverage, Precision and Fidelity
 
 <h2>How to run the programs</h2>
 
@@ -94,8 +80,8 @@ a. The accuracy for the each model/method
 b. The values for y_axis for the sparsity (To generate Sparsity Graphs, you will need to copy-paste these values into the respective gen_sparsity code).
 
 c. Top features in importance order based on rules 
-(To generate Descriptive Accuracy Graphs, rerun code using same number of samples but omitting top features each time and note the accuracy. Enter these accuracies in the respective gen_desc_acc code)
-(For Stability metrics, run the programs 3x or more and note the obtained top k features in each run and compare the similarity.)
+<\n>(To generate Descriptive Accuracy Graphs, rerun code using same number of samples but omitting top features each time and note the accuracy. Enter these accuracies in the respective gen_desc_acc code)
+<\n>(For Stability metrics, run the programs 3x or more and note the obtained top k features in each run and compare the similarity.)
 
 d. Time taken for execution (Efficiency)
 
@@ -103,13 +89,7 @@ e. The number of samples being used (Change value and rerun as desired, to obtai
 
 <h3>The Fidelity folder</h3>
 
-It contains the codes of all 4 models used in the paper. Each one of these programs outputs:
-
-a. Fidelity score
-
-b. Precision
-
-c. Coverage
+It contains the codes of all 4 models used in the paper. Each one of these programs outputs the Fidelity score. Anchor codes also have binary Precision & Coverage scores
 
 <h3>The Multiclass folder</h3>
   
