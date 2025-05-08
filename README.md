@@ -89,7 +89,7 @@ e. The number of samples being used (Change value and rerun as desired, to obtai
 
 <h3>The Fidelity folder</h3>
 
-It contains the codes of all 4 models used in the paper. Each one of these programs outputs the Fidelity score. Anchor codes also have binary Precision & Coverage scores
+It contains the codes of all 4 models used in the paper. Each one of these programs outputs the Fidelity score. Anchor codes also have binary Precision & Coverage scores while the same for Rulefit are in separate folders.
 
 <h3>The Multiclass folder</h3>
   
